@@ -15,7 +15,7 @@ if($_POST['function']=='post')
 		die('<span class="red_text">Please enter all fields.</span>');
 
 	mysql_query("INSERT INTO news (title,body,author,image,date)
-	('','".mysql_real_escape_string($_POST['title'])."','".mysql_real_escape_string($_POST['content'])."',
+	('".mysql_real_escape_string($_POST['title'])."','".mysql_real_escape_string($_POST['content'])."',
 	'".mysql_real_escape_string($_POST['author'])."','".mysql_real_escape_string($_POST['image'])."',
 	'".date("Y-m-d H:i:s")."')");
 	
