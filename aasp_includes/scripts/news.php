@@ -14,7 +14,7 @@ if($_POST['function']=='post')
 	if(empty($_POST['title']) || empty($_POST['author']) || empty($_POST['content']))
 		die('<span class="red_text">Please enter all fields.</span>');
 
-	mysql_query("INSERT INTO news (title,body,author,image,date)
+	mysql_query("INSERT INTO news (title,body,author,image,date) VALUES
 	('".mysql_real_escape_string($_POST['title'])."','".mysql_real_escape_string($_POST['content'])."',
 	'".mysql_real_escape_string($_POST['author'])."','".mysql_real_escape_string($_POST['image'])."',
 	'".date("Y-m-d H:i:s")."')");
