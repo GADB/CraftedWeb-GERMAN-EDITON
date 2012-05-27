@@ -506,7 +506,7 @@ class account {
 			else 
 			{
 			  if (strlen($_POST['new_pass']) < $GLOBALS['registration']['passMinLength'] || 
-			      strlen($_POST['new_pass'] > $GLOBALS['registration']['passMaxLength'])) 
+			      strlen($_POST['new_pass']) > $GLOBALS['registration']['passMaxLength'])
 				  echo '<b class="red_text">Your password must be between 6 and 32 letters</b>';
 			  else 
 			  {
