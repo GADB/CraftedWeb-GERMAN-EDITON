@@ -41,12 +41,12 @@
 	<h1>Willkommen bei CraftedWeb!</h1>
 
 	<div id="content">
-    	<p id="steps"><b>Installation</b> &raquo; Stufe 1 &raquo; Stufe 2 &raquo; Stufe 3 &raquo; Stufe 4 &raquo; Finished<p>
+    	<p id="steps"><b>Installation</b> &raquo; Schritt 1 &raquo; Schritt 2 &raquo; Schritt 3 &raquo; Schritt 4 &raquo; Fertig!<p>
         <hr/>
         
 		Willkommen beim CraftedWeb installer. Du hast bereits das CMS installiert und w&uuml;nscht ein Reinstall? Bitte l&ouml;sch alle Tabellen aus deiner Datenbank.</p>
         
-        <p>Die Installation ist schnell einfach und unkompliezirt. Du ben&ouml;tigst nur deine Datenbank Daten (Account brauch rechte um tabellen zu erstellen und editieren)</p>
+        <p>Die Installation ist schnell einfach und unkompliziert. Du ben&ouml;tigst nur deine Datenbank Daten (Account braucht rechte um tabellen zu erstellen und zu editieren)</p>
         
         <p>Das Installtions script erstell eine Datenbank, sowie auch eine Grund Configurations File. Alle Update SQL Files von /sql/updates Ordner werden automatisch mit eingef&uuml;gt.
         </p>

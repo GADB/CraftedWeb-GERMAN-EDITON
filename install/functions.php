@@ -34,7 +34,7 @@ function step1($realmlist,$host,$user,$pass,$webdb,$worlddb,$logondb,$domain,$ti
 {
 	if(empty($host) || empty($user) || empty($logondb) || empty($worlddb) || empty($webdb) || empty($realmlist) || empty($title)
 	|| empty($domain) || empty($email))
-		exit('Please enter all fields!');
+		exit('Bitte f&uuml;lle alle felder aus!');
 		
 	$_SESSION['install']['database']['host'] = $host;
 	$_SESSION['install']['database']['user'] = $user;
@@ -77,24 +77,24 @@ function step2()
 
 function step3() 
 {
-	echo '[Info]Connecting to database...';
+	echo '[Info]Verbinde mit Datenbank...';
 	mysql_connect($_SESSION['install']['database']['host'],$_SESSION['install']['database']['user'],$_SESSION['install']['database']['pass'])or die
-	('<br/>[FAILURE]Could not connect to the database. Please restart the installation. ');
+	('<br/>[FEHLER]Konnte keine Verbindung zur Datenbank herstellen. Bitte wiederhole die Installation. ');
 	
-	echo '<br/>[Success]Connected to database.';
-	echo '<br/>[Info]Creating Website database...';
+	echo '<br/>[Erfolgreich]Verbindung zur Datenbank steht.';
+	echo '<br/>[Info]Website Datenbank wird erstellt...';
 	
 	mysql_query("CREATE DATABASE IF NOT EXISTS ".mysql_real_escape_string($_SESSION['install']['database']['webdb']))or die
-	('<br/>[FAILURE]Could not create the website database. Please restart the installation.');
+	('<br/>[FEHLER]Die Website Datenbank konnte nicht erstellt werden. Bitte wiederhole die Installation.');
 	
-	echo '<br/>[Success]Created Website database';
-	echo '<br/>[Info]Connecting to Website database';
+	echo '<br/>[Erfolgreich]Die Website Datenbank wurde erstellt';
+	echo '<br/>[Info]Verbindung zur Websiete Datenbank steht';
 	
 	mysql_select_db($_SESSION['install']['database']['webdb'])or die
-	('<br/>[FAILURE]Could not connect to the Website database. Please restart the installation.');
+	('<br/>[FEHLER]Konnte keine Verbindung zur Website Datenbank herstellen. Bitte wiederhole die Installation.');
 	
-	echo '<br/>[Success]Connected to Website database';
-	echo '<br/>[Info]Creating tables & inserting data into Website database...';
+	echo '<br/>[Erfolgreich]Verbindung zur Websiete Datenbank steht';
+	echo '<br/>[Info]Tabellen werden erstellt und daten werden hinzugef¸gt...';
 	
 	$f = fopen('sql/CraftedWeb_Base.sql',"r+"); 
     $sqlFile = fread($f,filesize('sql/CraftedWeb_Base.sql')); 
@@ -104,13 +104,13 @@ function step3()
        if (strlen($stmt)>3){ 
             $result = mysql_query($stmt); 
               if (!$result){ 
-                 die('<br/>[FAILURE]Could not run SQL file for the Website database. Please restart the installation. (' . mysql_error() .')');
+                 die('<br/>[FEHLER]Die SQL File konnte nicht eingespielt werden. Bitte wiederhole die Installation. (' . mysql_error() .')');
               } 
            } 
       } 
 	
-	echo '<br/>[Success]SQL file imported successfully!';
-	echo '<br/>[Info](Optional)Trying to import <i>item_icons</i> into Website database.';
+	echo '<br/>[Erfolgreich]Die SQL File konnte eingespielt werden!';
+	echo '<br/>[Info](Optional) es wird <i>item_icons</i> in die Website Datenbank eingespielt.';
 	
 	$f = fopen('sql/item_icons.sql',"r+"); 
     $sqlFile2 = fread($f,filesize('sql/item_icons.sql')); 
@@ -125,11 +125,11 @@ function step3()
            } 
       } 
 	if(!isset($err))  
-		echo '<br/>[Success]SQL file imported successfully!';
+		echo '<br/>[Erfolgreich]Die SQL File konnte eingespielt werden!';
 	else
-		echo '<br/>[Info]<i>item_icons</i> was not imported. ('.mysql_error().')';	
+		echo '<br/>[Info]<i>item_icons</i> wurde nicht eingespielt. ('.mysql_error().')';	
 	
-	echo '<br/>[Info]Writing configuration file...';
+	echo '<br/>[Info]Schreibe configuration file...';
 	
 
 $config = '<?php
@@ -441,12 +441,12 @@ $config = '<?php
 ?>';
 
 $fp = fopen('../includes/configuration.php', 'w');
-fwrite($fp, $config)or die('<br/>[FAILURE]Could not write Configuration file. Please restart the installation.');
+fwrite($fp, $config)or die('<br/>[FEHLER]Configuration file konnte nicht geschrieben werden. Bitte wiederhole die Installation.');
 fclose($fp);
 
-echo '<br/>[Success]Configuration file was written!';
+echo '<br/>[Erfolgreich]Configuration file wurde geschrieben!';
 
-echo '<hr/>Installation proccess finished. <a href="?st=4">Click here to continue</a>';
+echo '<hr/>Installation abgeschlossen. <a href="?st=4">Hier klicken um fortzufahren</a>';
 	  
 }
 
@@ -454,25 +454,25 @@ function step4()
 {
 	$files = scandir('sql/updates/');
 	
-	echo '[Info]Connecting to database...';
+	echo '[Info]Verbinde mit Datenbank...';
 	 mysql_connect($_SESSION['install']['database']['host'],$_SESSION['install']['database']['user'],$_SESSION['install']['database']['pass'])or die
-	('<br/>[FAILURE]Could not connect to the database. Please restart the installation. ');
+	('<br/>[FEHLER]Konnte keine Verbindung zur Datenbank herstellen. Bitte wiederhole die Installation. ');
 	
-	echo '<br/>[Success]Connected to database.';
-	echo '<br/>[Info]Connecting to Website database';
+	echo '<br/>[Erfolgreich]Verbindung zur Datenbank erfolgreich';
+	echo '<br/>[Info]Verbindung zur Datenbank steht';
 	
 	mysql_select_db($_SESSION['install']['database']['webdb'])or die
-	('<br/>[FAILURE]Could not connect to the Website database. Please restart the installation.');
+	('<br/>[FEHLER]Konnte keine Verbindung zur Website Datenbank herstellen. Bitte wiederhole die Installation.');
 	
-	echo '<br/>[Success]Connected to Website database';
-	echo '<br/>[Info]Now applying updates...';
+	echo '<br/>[Erfolgreich]Verbindung zur Website Datenbank steht';
+	echo '<br/>[Info]Updates werden eingespielt...';
 	
 	foreach($files as $value) {
 		if(substr($value,-3,3)=='sql')
 		{
-			echo '<br>[Info]Applying '.$value.'...';
+			echo '<br>[Info]Eingespielt '.$value.'...';
 			$f = fopen('sql/updates/'.$value,"r+")or die
-			('<br/>[FAILURE]Could not open SQL file. Please set the CHMOD to 777 and try again.'); 
+			('<br/>[FEHLER]SQL File konnte nicht geˆffnet werden. Bitte setze die File auf CHMOD 777 und wiederhole den vorgang.'); 
 			$sqlFile = fread($f,filesize('sql/updates/'.$value)); 
 			$sqlArray = explode(';',$sqlFile); 
 			
@@ -480,14 +480,14 @@ function step4()
 			   if (strlen($stmt)>3){ 
 					$result = mysql_query($stmt); 
 					  if (!$result){ 
-						 die('<br/>[FAILURE]Could not run SQL file for the Website database. (' . mysql_error() .')');
+						 die('<br/>[FEHLER]SQL Files konnten nicht eingespielt werden. (' . mysql_error() .')');
 					  } 
 				   } 
 			  } 
 		}
 	}
 	
-	echo '[Success]Updates completed. <a href="?st=5">Click here to continue</a>';
+	echo '[Erfolgreich]Update komplett. <a href="?st=5">Click hier um fortzufahren</a>';
 }
 
 function step5($rid,$name,$port,$host,$m_host,$m_user,$m_pass,$a_user,$a_pass,$desc,$sendtype,$chardb,$raport,$soapport)
@@ -518,7 +518,7 @@ function step5($rid,$name,$port,$host,$m_host,$m_user,$m_pass,$a_user,$a_pass,$d
 	'".$host."','".$sendtype."','".$m_host."','".$m_user."','".$m_pass."')")or die
 	('Could not insert realm into database. ('.mysql_error().')');
 	
-	echo 'Realm successfully created. <a href="?st=6">Finish Installation</a>';
+	echo 'Realm wurde erstellt. <a href="?st=6">Installation abschlieﬂen!</a>';
 }
 
 ?>
