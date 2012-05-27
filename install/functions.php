@@ -65,13 +65,13 @@ function step2()
 		$sql = false;	
 	
 	if($sql==true && $config==true)
-		exit( "Both Configuration file & SQL file is write- & readable. <a href='?st=3'>Click here to continue</a>" );	
+		exit( "Die Configuration file & SQL files sind schreibbar und lesbar. <a href='?st=3'>Hier klicken um fortzufahren</a>" );	
 	if($sql==true && $config==false)
-		exit( "SQL file <i>is</i> readable. Configuration file is <b>NOT</b> writeable. Please check the instructions above." );
+		exit( "SQL file <i>ist</i> lesbar. Configuration file ist <b>NICHT</b> schreibbar. Bitte check die anweiﬂungen nochtmal" );
 	if($sql==false && $config==true)
-		exit( "SQL file is <b>NOT</b> readable. Configuration file <i>is</i> writeable. Please check the instructions above." );	
+		exit( "SQL file ist <b>NICHT</b> lesbar. Configuration file <i>ist</i> schreibbar. Bitte check die anweiﬂungen nochtmal" );	
 		
-		exit( "Neither the SQL file or the Configuration file is writeable. Please check the instructions above." );
+		exit( "Keiner der SQL file or the Configuration file is schreibbar. Bitte check die anweiﬂungen nochtmal" );
 		
 }
 
@@ -141,10 +141,11 @@ $config = '<?php
 	## GENERATION 1            ##
 	## Author:				   ##
 	## Anthony @ CraftedDev    ##
+	## DE @ GADB			   ##
 	## ------------------------##
 	## Please note that:       ##
-	## true = Enabled          ##
-	## false = Disabled        ##
+	## true = Aktiv            ##
+	## false = Abgeschalten    ##
 	#############################
 	
 	/*************************/
@@ -414,9 +415,9 @@ $config = '<?php
 	}
 	
 	if($GLOBALS[\'core_expansion\']>2) 
-		$tooltip_href = \'www.wowhead.com/\';
+		$tooltip_href = \'de.wowhead.com/\';
 	else
-		$tooltip_href = \'www.openwow.com/?\';
+		$tooltip_href = \'de.openwow.com/?\';
 	
 	//Set the timezone.
 	date_default_timezone_set($GLOBALS[\'timezone\']);
