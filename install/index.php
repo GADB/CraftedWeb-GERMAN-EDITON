@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to CraftedWeb installation</title>
+	<title>Willkommen bei CraftedWeb installation</title>
 
 	<style type="text/css">
 
@@ -38,22 +38,22 @@
 <body>
 
 <div id="main_box">
-	<h1>Welcome to CraftedWeb!</h1>
+	<h1>Willkommen bei CraftedWeb!</h1>
 
 	<div id="content">
-    	<p id="steps"><b>Introduction</b> &raquo; Step 1 &raquo; Step 2 &raquo; Step 3 &raquo; Step 4 &raquo; Finished<p>
+    	<p id="steps"><b>Installation</b> &raquo; Stufe 1 &raquo; Stufe 2 &raquo; Stufe 3 &raquo; Stufe 4 &raquo; Finished<p>
         <hr/>
         
-		Welcome to the CraftedWeb installer. If you've already installed the CMS, but wish to Re-Install it, please clear your database completely and remove the configuration file.</p>
+		Willkommen beim CraftedWeb installer. Du hast bereits das CMS installiert und w&uuml;nscht ein Reinstall? Bitte l&ouml;sch alle Tabellen aus deiner Datenbank.</p>
         
-        <p>The installation proccess will be quick and easy, and the only thing you need is your database information! (And access to create tables, etc)</p>
+        <p>Die Installation ist schnell einfach und unkompliezirt. Du ben&ouml;tigst nur deine Datenbank Daten (Account brauch rechte um tabellen zu erstellen und editieren)</p>
         
-        <p>The installation scripts will install your database, create the default configuration file, and run all updates available in the /sql/updates folder.
+        <p>Das Installtions script erstell eine Datenbank, sowie auch eine Grund Configurations File. Alle Update SQL Files von /sql/updates Ordner werden automatisch mit eingef&uuml;gt.
         </p>
         
-        <p>If you would however, encounter any problems, I really hope that you <b>first</b> try to fix them on your own if you can. The page will report all errors, and some are caused on your side, not because of the developers of this installation script. If you can't, report them at the forum. </p>
+        <p>Wenn ihr Probleme habt oder Fehler entdeckt habt meldet bitte diese per Github oder in CraftWeb Forum (AC-Web.org). CraftWeb ist nicht f&uumlr die Übersetzung verantwortlich, Probleme oder weiter Übersetzungen bitte per Github bei GADB melden. </p>
         
-        <p>Thanks, <br/>Anthony @ CraftedDev.</p>
+        <p>Thanks, <br/>Anthony @ CraftedDev and GADB (German Edition).</p>
         
         <p><input type="submit" value="Start the installation" onclick="window.location='install.php?st=1'"></p>
 	</div>
