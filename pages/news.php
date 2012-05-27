@@ -148,12 +148,12 @@ else
 			
 			if ($GLOBALS['news']['limitHomeCharacters']==true) 
 			{ 		
-				echo website::limit_characters(htmlentities($text,200));
+				echo website::limit_characters($text,200);
 				$output.= website::limit_characters($row['body'],200);
 			} 
 			else 
 			{
-				 echo nl2br(htmlentities($text)); 
+				 echo nl2br($text); 
 				 $output .= nl2br($row['body']); 
 			}
 			
