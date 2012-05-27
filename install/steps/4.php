@@ -1,7 +1,7 @@
-<p id="steps">Introduction &raquo; Step 1 &raquo; Step 2 &raquo; Step 3 &raquo; <b>Step 4</b> &raquo; Step 5 &raquo; Finished<p>
+<p id="steps">Installation &raquo; Schritt 1 &raquo; Schritt 2 &raquo; Schritt 3 &raquo; <b>Schritt 4</b> &raquo; Schritt 5 &raquo; Fertig!<p>
 <hr/>
 <p>
-	After scanning your updates folder, we found the following database updates: 
+	Nach scannen deines Update Ordner haben wir folgende Updates gefunden: 
     <ul>
     	<?php
 			$files = scandir('sql/updates/');
@@ -16,7 +16,7 @@
     </ul>
     <?php
 	if(!isset($found))
-				echo '<code>No updates was found in your /updates folder. <a href="?st=5">Click here to continue</a></code>';
+				echo '<code>Wurde kein Update in Update Ordner gefunden. <a href="?st=5">Hier Klicken um fortzufahren</a></code>';
 	?>
     <i>* Tip: Clock on them to get additional information about them.</i>
 </p>
@@ -25,5 +25,5 @@ Click the button below to apply all of these updates. If you do not wish to have
 </p>
 <p>
 	<br/>
-	<input type="submit" value="Apply all database updates" onclick="step4()">
+	<input type="submit" value="Alle Updates einspielen" onclick="step4()">
 </p>

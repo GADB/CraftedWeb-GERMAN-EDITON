@@ -51,11 +51,11 @@
         <p>Das Installtions script erstell eine Datenbank, sowie auch eine Grund Configurations File. Alle Update SQL Files von /sql/updates Ordner werden automatisch mit eingef&uuml;gt.
         </p>
         
-        <p>Wenn ihr Probleme habt oder Fehler entdeckt habt meldet bitte diese per Github oder in CraftWeb Forum (AC-Web.org). CraftWeb ist nicht f&uumlr die Übersetzung verantwortlich, Probleme oder weiter Übersetzungen bitte per Github bei GADB melden. </p>
+        <p>Wenn ihr Probleme habt oder Fehler entdeckt habt meldet bitte diese per Github oder in CraftWeb Forum (AC-Web.org). CraftWeb ist nicht f&uumlr die &Uuml;bersetzung verantwortlich, Probleme oder weiter &Uuml;bersetzungen bitte per Github bei GADB melden. </p>
         
-        <p>Thanks, <br/>Anthony @ CraftedDev and GADB (German Edition).</p>
+        <p>Danke, <br/>Anthony @ CraftedDev und GADB (German Edition).</p>
         
-        <p><input type="submit" value="Start the installation" onclick="window.location='install.php?st=1'"></p>
+        <p><input type="submit" value="Installation Starten" onclick="window.location='install.php?st=1'"></p>
 	</div>
 </div>
 

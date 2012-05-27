@@ -1,15 +1,15 @@
-<p id="steps">Introduction &raquo; Step 1 &raquo; Step 2 &raquo; <b>Step 3</b> &raquo; Step 4 &raquo; Step 5 &raquo; Finished<p>
+<p id="steps">Installation &raquo; Schritt 1 &raquo; Schritt 2 &raquo; <b>Schritt 3</b> &raquo; Schritt 4 &raquo; Schritt 5 &raquo; Fertig!<p>
 <hr/>
 <p>
-	Now is the time to actually create something. The script will now: 
+	Nun ist die Zeit die Website zu erstellen. Das Script f&uuml;hrt folgendes aus: 
     <ul>
-    	<li>Create the Website Database if it does not exist</li>
-        <li>Create all tables in the Website Database</li>
-        <li>Insert default data into the Website Database</li>
-        <li>Write the configuration file</li>
+    	<li>Erstellt die Website Datenbank wenn sie nicht exestiert</li>
+        <li>Erstelle alle Tabellen in der Website Datenbank</li>
+        <li>F&uuml;gt Standart Daten hinzu</li>
+        <li>Erstellt die configuration.php</li>
     </ul>
     
-    To prevent any database errors, please make sure that the MySQL user your specified has access to the following commands:
+    Sollten Probleme auftertten stelle sicher das MySQL folgende Commands ausf&uuml;hren kann:
     <ul>
     	<li>INSERT</li>
         <li>INSERT IGNORE</li>
@@ -19,9 +19,9 @@
         <li>DROP</li>
         <li>CREATE</li>
     </ul>
-    You may remove some of these after the installation proccess has finished as they are not needed when running the CMS.
+    Sobald alles fertig l&ouml;sche den Installations Order, dieser wird danach nicht mehr ben&ouml;tigt.
 </p>
 <p>
 	<br/>
-	<input type="submit" value="Start the proccess!" onclick="step3()">
+	<input type="submit" value="Prozess Starten!" onclick="step3()">
 </p>

@@ -1,12 +1,12 @@
-<p id="steps">Introduction &raquo; Step 1 &raquo; <b>Step 2</b> &raquo; Step 3 &raquo; Step 4 &raquo; Step 5 &raquo; Finished<p>
+<p id="steps">Instllation &raquo; Schritt 1 &raquo; <b>Schritt 2</b> &raquo; Schritt 3 &raquo; Schritt 4 &raquo; Schritt 5 &raquo; Fertig!<p>
 <hr/>
-<p>Now we need to test if we can write the configuration file & read the SQL file. Before we test this, make sure that:
+<p>Jetzt müssen wir testen, ob wir die Konfigurationsdatei schreiben können sowie lesen. Bevor wir dies testen, bitte sicherzustellen, dass:
 	<ul>
-    	<li>The CHMOD is set to 777 on both <i>'includes/configuration.php'</i> AND <i>'install/sql/CraftedWeb_Base.sql'</i> (You <b>must</b> change this back to 644 after the installation proccess has finished!)</li>
-        <li>The file exists (We are not creating a new file, we're just writing onto a blank one. If the file (includes/configuration.php) does not exist, create it. You can use notepad or any other similar software, just remember to save it as <i>configuration.php</i>, NOT .TXT!</li>
+    	<li> Die CHMOD ist auf 777 sowohl auf <i> 'includes / configuration.php' </ i> und <i> 'install / sql / CraftedWeb_Base.sql' </ i> (Sie <b> muss </ set b> ändern Sie diese zurück auf 644, nachdem die Installation beendet ist!) </ li>
+         <li> Die Datei existiert (Wir erstellen keine Neue Datei sonder wir schreiben diese Um,(includes / configuration.php) als diese Datei nicht existiert, erstellen Sie eine. Sie können Notepad oder jede andere ähnlich Software verwenden, nur nicht vergessen, sie als <i> configuration.php zu speichern nich als .TEXT! </ li>
     </ul>
 </p>
 <p>
 	<br/>
-	<input type="submit" value="Test if file is writeable" onclick="step2()">
+	<input type="submit" value="Testen ob Files Schreibbar sind" onclick="step2()">
 </p>

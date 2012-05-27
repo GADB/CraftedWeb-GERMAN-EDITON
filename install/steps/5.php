@@ -1,4 +1,4 @@
-<p id="steps">Introduction &raquo; Step 1 &raquo; Step 2 &raquo; Step 3 &raquo; Step 4 &raquo; <b>Step 5</b> &raquo; Finished<p>
+<p id="steps">Installation &raquo; Schritt 1 &raquo; Schritt 2 &raquo; Schritt 3 &raquo; Schritt 4 &raquo; <b>Schritt 5</b> &raquo; Fertig!<p>
 <hr/>
 <table cellpadding="10" cellspacing="5">
 	<tr>
@@ -56,6 +56,6 @@
     </tr>
     <tr>
     	<td></td>
-        <td><input type="submit" value="Finished" onclick="step5()"></td>
+        <td><input type="submit" value="Fertigstellen!" onclick="step5()"></td>
     </tr>
 </table>
