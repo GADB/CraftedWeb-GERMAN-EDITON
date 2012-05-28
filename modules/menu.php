@@ -8,8 +8,8 @@ else
  $getMenuLinks = mysql_query("SELECT * FROM site_links ".$sql." ORDER BY position ASC");
  if (mysql_num_rows($getMenuLinks)==0) 
  {
-	 buildError("<b>Template error:</b> No menu links was found in the CraftedWeb database!",NULL);
-	 echo "<br/>No menu links was found!";
+	 buildError("<b>Template fehler:</b> Keine Menu links wurden in der CraftedWeb Datenbank gefunden!",NULL);
+	 echo "<br/>Kein Menu link gefunden";
  }
 		 
  while($row = mysql_fetch_assoc($getMenuLinks)) 

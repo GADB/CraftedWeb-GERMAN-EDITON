@@ -2,7 +2,7 @@
 if($GLOBALS['social']['enableFacebookModule']==TRUE) { 
 ?>
 	<div class="box_one">
-	<div class="box_one_title">Find us on Facebook</div>
+	<div class="box_one_title">Finde uns auf Facebook</div>
     <div id="fb-root"></div>
 		<script>
 		(function(d, s, id) 
@@ -10,7 +10,7 @@ if($GLOBALS['social']['enableFacebookModule']==TRUE) {
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) {return;}
           js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+          js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1";
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
         </script>

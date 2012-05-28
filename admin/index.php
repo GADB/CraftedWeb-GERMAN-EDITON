@@ -23,30 +23,30 @@
                                    </ul>
                               <li>Pages</li>
                                    <ul class="hidden" <?php activeMenu('pages'); ?>>
-                                       <a href="?p=pages">All Pages</a>
-                                       <a href="?p=pages&s=new">Add New</a>
+                                       <a href="?p=pages">Seiten anzeigen</a>
+                                       <a href="?p=pages&s=new">Neue Seite erstellen</a>
                                    </ul>
                               <li>News</li>
                                    <ul class="hidden" <?php activeMenu('news'); ?>>
-                                       <a href="?p=news">Post news</a>
+                                       <a href="?p=news">News erstellen</a>
                                        <a href="?p=news&s=manage">Manage news</a>
                                    </ul>     
                               <li>Shop</li>
                                     <ul class="hidden" <?php activeMenu('shop'); ?>>
-                                       <a href="?p=shop">Overview</a>
-                                       <a href="?p=shop&s=add">Add items</a>
-                                       <a href="?p=shop&s=manage">Manage items</a>
+                                       <a href="?p=shop">Anzeigen</a>
+                                       <a href="?p=shop&s=add">Item Hinzufügen</a>
+                                       <a href="?p=shop&s=manage">Item Managen</a>
                                        <a href="?p=shop&s=tools">Tools</a>
                                    </ul> 
                               <li>Donations</li>
                                    <ul class="hidden" <?php activeMenu('donations'); ?>>
-                                       <a href="?p=donations">Overview</a>
+                                       <a href="?p=donations">Anzeigen</a>
                                        <a href="?p=donations&s=browse">Browse</a>
                                    </ul> 
                               <li>Logs</li>
                                     <ul class="hidden" <?php activeMenu('logs'); ?>>
                                        <a href="?p=logs&s=voteshop">Vote shop</a>
-                                       <a href="?p=logs&s=donateshop">Donation shop</a>
+                                       <a href="?p=logs&s=donateshop">Spenden shop</a>
                                        <a href="?p=logs&s=admin">Admin Panel</a>
                                    </ul> 
                               <li>Interface</li>
@@ -58,13 +58,13 @@
                                    </ul> 
                               <li>Users</li>
                                     <ul class="hidden" <?php activeMenu('users'); ?>>
-                                       <a href="?p=users">Overview</a>
-                                       <a href="?p=users&s=manage">Manage Users</a>
+                                       <a href="?p=users">Anzeigen</a>
+                                       <a href="?p=users&s=manage">Benutzer Manager</a>
                                    </ul> 
                               <li>Realms</li>
                                     <ul class="hidden" <?php activeMenu('realms'); ?>>
-                                       <a href="?p=realms">New realm</a>
-                                       <a href="?p=realms&s=manage">Manage realm(s)</a>
+                                       <a href="?p=realms">Neuer Realm</a>
+                                       <a href="?p=realms&s=manage">Manager Realm(s)</a>
                                    </ul> 
                               <li>Services</li>
                                     <ul class="hidden" <?php activeMenu('services'); ?>>
