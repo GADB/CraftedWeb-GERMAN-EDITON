@@ -1,4 +1,4 @@
-<div class='box_two_title'>Change Password</div>
+<div class='box_two_title'>Kennwort wechseln</div>
 <?php
 account::isNotLoggedIn();
 if (isset($_POST['change_pass']))
@@ -7,11 +7,11 @@ if (isset($_POST['change_pass']))
 <form action="?p=changepass" method="post">
 <table width="70%">
        <tr>
-           <td>New password:</td> 
+           <td>Neues Kennwort:</td> 
            <td><input type="password" name="new_pass" class="input_text"/></td>
        </tr> 
        <tr>
-           <td>Repeat new password:</td> 
+           <td>Neues Kennwort wiederholen:</td> 
            <td><input type="password" name="new_pass_repeat" class="input_text"/></td>
        </tr>
         <tr>
@@ -19,12 +19,12 @@ if (isset($_POST['change_pass']))
            <td><hr/></td>
        </tr> 
        <tr>
-           <td>Enter your current password:</td> 
+           <td>Altes Kennwort:</td> 
            <td><input type="password" name="cur_pass" class="input_text"/></td>
        </tr>  
        <tr>
            <td></td> 
-           <td><input type="submit" value="Change Password" name="change_pass" /></td>
+           <td><input type="submit" value="Kennwort wechseln" name="change_pass" /></td>
        </tr>                
 </table>                 
 </form>

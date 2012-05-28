@@ -9,23 +9,23 @@
  $selected = 'selected="selected"';
  ///////////////////////////////
  ?>
-<div class='box_two_title'>Donation Shop
+<div class='box_two_title'>Spenden Shop
 
-<div id='cartHolder' onclick='window.location="?p=cart"'>Loading Cart...</div> 
+<div id='cartHolder' onclick='window.location="?p=cart"'>Lade Warenkorp...</div> 
         <div id='cartArrow'>
         <img src='styles/default/images/arrow.png' border='none'/></div>
 </div>
 
 <?php
 if($GLOBALS[$shopVar.'Shop']['enableShop']==FALSE)
-	echo "<span class='attention'><b>Attention! </b>The shop is currently closed. Please check back later.</span>";
+	echo "<span class='attention'><b>Achtung!</b>Der Shop ist derzeit geschlossen. Bitte versuchen Sie es später.</span>";
 else 
 {
 ?>
 
 <span class='currency'><?php echo $shopCurrency; ?>: 
 <?php echo account::loadDP($_SESSION['cw_user']); ?></span>
-<?php if (!isset($_GET['search'])) { $inputValue = "Search for an item..."; } else { $inputValue = $_GET['search_value']; } 
+<?php if (!isset($_GET['search'])) { $inputValue = "Nach einem item..."; } else { $inputValue = $_GET['search_value']; } 
 
 if($GLOBALS[$shopVar.'Shop']['shopType']==1)
 {
@@ -36,29 +36,29 @@ if($GLOBALS[$shopVar.'Shop']['shopType']==1)
         <input type="hidden" name="p" value="<?php echo $shopPage; ?>">
         <table> <tr valign="middle">
             <td><input type="text" onclick="this.value=''" value="<?php echo $inputValue; ?>" name="search_value"></td>          
-            <td><input type="submit" value="Search" name="search"></td>
+            <td><input type="submit" value="Suchen" name="search"></td>
             <tr>
         </table>
         <?php if($GLOBALS[$shopVar.'Shop']['enableAdvancedSearch']==TRUE) { ?> <br/>
-        Advanced Search<br/>
+        Erweiterte Suche<br/>
 		<table width="56%">
 		                   <tr>	<td>	
                             <select name="q" style="width: 100%">
                                 <option>--Quality--</option>
-                                <option value="0" <?php if(isset($_GET['q']) && $_GET['q']==0 && $_GET['q']!="--Quality--" 
+                                <option value="0" <?php if(isset($_GET['q']) && $_GET['q']==0 && $_GET['q']!="--Qualit&auml;t--" 
 								&& isset($_GET['q'])) 
 								{ echo $selected; } ?>>
-                                Poor</option>
-                                <option value="1" <?php if(isset($_GET['q']) && $_GET['q']==1) { echo $selected; } ?>>Common</option>
-                                <option value="2" <?php if(isset($_GET['q']) && $_GET['q']==2) { echo $selected; } ?>>Uncommon</option>
-                                <option value="3" <?php if(isset($_GET['q']) && $_GET['q']==3) { echo $selected; } ?>>Rare</option>
-                                <option value="4" <?php if(isset($_GET['q']) && $_GET['q']==4) { echo $selected; } ?>>Epic</option>
-                                <option value="5" <?php if(isset($_GET['q']) && $_GET['q']==5) { echo $selected; } ?>>Legendary</option>
-                                <option value="7" <?php if(isset($_GET['q']) && $_GET['q']==7) { echo $selected; } ?>>Heirloom</option>
+                                Schlecht</option>
+                                <option value="1" <?php if(isset($_GET['q']) && $_GET['q']==1) { echo $selected; } ?>>Verbeitet</option>
+                                <option value="2" <?php if(isset($_GET['q']) && $_GET['q']==2) { echo $selected; } ?>>Selten</option>
+                                <option value="3" <?php if(isset($_GET['q']) && $_GET['q']==3) { echo $selected; } ?>>Rar</option>
+                                <option value="4" <?php if(isset($_GET['q']) && $_GET['q']==4) { echo $selected; } ?>>Episch</option>
+                                <option value="5" <?php if(isset($_GET['q']) && $_GET['q']==5) { echo $selected; } ?>>Legend&aumlr</option>
+                                <option value="7" <?php if(isset($_GET['q']) && $_GET['q']==7) { echo $selected; } ?>>Erbst&uuml;ck</option>
                             </select>	
                            </td>
                            <td>	<select name="r" style="width: 100%">
-                                    <option>--Results--</option>
+                                    <option>--Ergebnisse--</option>
                                     <option value="50" <?php if(isset($_GET['r']) && $_GET['r']==50) { echo $selected; }?>>50</option>
                                     <option value="100" <?php if(isset($_GET['r']) && $_GET['r']==100) { echo $selected; }?>>100</option>
                                     <option value="150" <?php if(isset($_GET['r']) && $_GET['r']==150) { echo $selected; }?>>150</option>
@@ -70,52 +70,52 @@ if($GLOBALS[$shopVar.'Shop']['shopType']==1)
                             <tr>	
                             <td>	
 								<select name="t" style="width: 100%">
-                                <option>--Type--</option>
+                                <option>--Typ--</option>
                                 <option value="0" <?php if(isset($_GET['t']) && $_GET['t']==0 && $_GET['t']!="--Type--"
 								&& isset($_GET['q'])) 
-								{ echo $selected; } ?>>Consumable</option>
-                                <option value="1" <?php if(isset($_GET['t']) && $_GET['t']==1) { echo $selected; } ?>>Container</option>
-                                <option value="2" <?php if(isset($_GET['t']) && $_GET['t']==2) { echo $selected; } ?>>Weapons</option>
-                                <option value="3" <?php if(isset($_GET['t']) && $_GET['t']==3) { echo $selected; } ?>>Gem</option>
-                                <option value="4" <?php if(isset($_GET['t']) && $_GET['t']==4) { echo $selected; } ?>>Armor</option>
-                                <option value="15" <?php if(isset($_GET['t']) && $_GET['t']==15) { echo $selected; } ?>>Miscellaneous</option>
-                                <option value="16"<?php if(isset($_GET['t']) && $_GET['t']==16) { echo $selected; } ?>>Glyph</option>
-                                <option value="15-5" <?php if(isset($_GET['t']) && $_GET['t']=="15-5") { echo $selected; } ?>>Mount</option>
-                                <option value="15-2" <?php if(isset($_GET['t']) && $_GET['t']=="15-2") { echo $selected; } ?>>Pet</option>
+								{ echo $selected; } ?>>Verbrauchsmaterial</option>
+                                <option value="1" <?php if(isset($_GET['t']) && $_GET['t']==1) { echo $selected; } ?>>Beh&auml;lter</option>
+                                <option value="2" <?php if(isset($_GET['t']) && $_GET['t']==2) { echo $selected; } ?>>Waffen</option>
+                                <option value="3" <?php if(isset($_GET['t']) && $_GET['t']==3) { echo $selected; } ?>>Schmuckstück</option>
+                                <option value="4" <?php if(isset($_GET['t']) && $_GET['t']==4) { echo $selected; } ?>>R&uuml;stung</option>
+                                <option value="15" <?php if(isset($_GET['t']) && $_GET['t']==15) { echo $selected; } ?>>Verschiedenes</option>
+                                <option value="16"<?php if(isset($_GET['t']) && $_GET['t']==16) { echo $selected; } ?>>Glyphen</option>
+                                <option value="15-5" <?php if(isset($_GET['t']) && $_GET['t']=="15-5") { echo $selected; } ?>>Reittiere</option>
+                                <option value="15-2" <?php if(isset($_GET['t']) && $_GET['t']=="15-2") { echo $selected; } ?>>Haustiere</option>
                                 </select>	
                            </td> 
                            <td>	 
-                                <input type="checkbox" name="st"  value="8"/> Heroic
+                                <input type="checkbox" name="st"  value="8"/> Heroisch
                             </td>
                            	</tr>
                             <tr>
                                 <td>
                                 <select name="f" style="width: 100%">
                                     <option>--Faction--</option>
-                                    <option value="1" <?php if(isset($_GET['f']) && $_GET['f']==1) { echo $selected; }?>>Horde Only</option>
-                                    <option value="2" <?php if(isset($_GET['f']) && $_GET['f']==2) { echo $selected; }?>>Alliance Only</option>
+                                    <option value="1" <?php if(isset($_GET['f']) && $_GET['f']==1) { echo $selected; }?>>Nur Horde</option>
+                                    <option value="2" <?php if(isset($_GET['f']) && $_GET['f']==2) { echo $selected; }?>>Nur Allianz</option>
                                 </select>
                                 </td>
                                 <td>
                                 <select name="c" style="width: 100%">
                                     <option>--Class--</option>
-                                    <option value="1" <?php if(isset($_GET['c']) && $_GET['c']==1) { echo $selected; }?>>Warrior Only</option>
-                                    <option value="2" <?php if(isset($_GET['c']) && $_GET['c']==2) { echo $selected; }?>>Paladin Only</option>
-                                    <option value="4" <?php if(isset($_GET['c']) && $_GET['c']==4) { echo $selected; }?>>Hunter Only</option>
-                                    <option value="8" <?php if(isset($_GET['c']) && $_GET['c']==8) { echo $selected; }?>>Rogue Only</option>
-                                    <option value="16" <?php if(isset($_GET['c']) && $_GET['c']==16) { echo $selected; }?>>Priest Only</option>
-                                    <option value="32" <?php if(isset($_GET['c']) && $_GET['c']==32) { echo $selected; }?>>Death Knight Only</option>
-                                    <option value="64" <?php if(isset($_GET['c']) && $_GET['c']==64) { echo $selected; }?>>Shaman Only</option>
-                                    <option value="128" <?php if(isset($_GET['c']) && $_GET['c']==128) { echo $selected; }?>>Mage Only</option>
-                                    <option value="256" <?php if(isset($_GET['c']) && $_GET['c']==256) { echo $selected; }?>>Warlock Only</option>
-                                    <option value="1024" <?php if(isset($_GET['c']) && $_GET['c']==1024) { echo $selected; }?>>Druid Only</option>
+                                    <option value="1" <?php if(isset($_GET['c']) && $_GET['c']==1) { echo $selected; }?>>Nur Krieger</option>
+                                    <option value="2" <?php if(isset($_GET['c']) && $_GET['c']==2) { echo $selected; }?>>Nur Paladin</option>
+                                    <option value="4" <?php if(isset($_GET['c']) && $_GET['c']==4) { echo $selected; }?>>Nur J&auml;ger</option>
+                                    <option value="8" <?php if(isset($_GET['c']) && $_GET['c']==8) { echo $selected; }?>>Nur Schurke</option>
+                                    <option value="16" <?php if(isset($_GET['c']) && $_GET['c']==16) { echo $selected; }?>>Nur Priester</option>
+                                    <option value="32" <?php if(isset($_GET['c']) && $_GET['c']==32) { echo $selected; }?>>Nur Todesritter</option>
+                                    <option value="64" <?php if(isset($_GET['c']) && $_GET['c']==64) { echo $selected; }?>>Nur Schamane</option>
+                                    <option value="128" <?php if(isset($_GET['c']) && $_GET['c']==128) { echo $selected; }?>>Nur Magier</option>
+                                    <option value="256" <?php if(isset($_GET['c']) && $_GET['c']==256) { echo $selected; }?>>Nur Hexenmeister</option>
+                                    <option value="1024" <?php if(isset($_GET['c']) && $_GET['c']==1024) { echo $selected; }?>>Nur Druide</option>
                                 </select>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                             <select name="ilfrom" style="width: 100%">
-                                            <option>--Item level from--</option>
+                                            <option>--Itemlevel aus--</option>
                                             <?php
 											    for ($i = 1; $i <= $GLOBALS['maxItemLevel']; $i++) 
 												{
@@ -131,7 +131,7 @@ if($GLOBALS[$shopVar.'Shop']['shopType']==1)
                                 </td>
                                 <td>
                                             <select name="ilto" style="width: 100%">
-                                            <option>--Item level to--</option>
+                                            <option>--Itemlevel zu--</option>
                                             <?php
 											    for ($i = $GLOBALS['maxItemLevel']; $i >= 1; $i--) 
 												{

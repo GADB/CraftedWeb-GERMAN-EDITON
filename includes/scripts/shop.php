@@ -50,11 +50,11 @@ if($_POST['action']=='getMinicart')
 	if($_POST['cart']=="donateCart")
 	   $curr = $GLOBALS['donation']['coins_name'];
 	else 
-	   $curr = "Vote Points"; 
+	   $curr = "Vote Punkte"; 
 	
 	if(!isset($_SESSION[$_POST['cart']]))
 	{
-		echo "<b>Show Cart:</b> 0 Items (0 ".$curr.")";
+		echo "<b>In Warenkorb:</b> 0 Items (0 ".$curr.")";
 		exit();
 	}
 	
@@ -72,7 +72,7 @@ if($_POST['action']=='getMinicart')
 			$totalPrice = $totalPrice + ( $_SESSION[$_POST['cart']][$entry]['quantity'] * $row['price'] );
 	  }
 
-	echo "<b>Show Cart:</b> ".$num." Items (".$totalPrice." ".$curr.")";
+	echo "<b>In Warenkorb:</b> ".$num." Items (".$totalPrice." ".$curr.")";
 }
 
 if($_POST['action']=='saveQuantity') 
@@ -160,7 +160,7 @@ if($_POST['action']=='checkout')
 	  }
 	  
 	  if(account::hasVP($_SESSION['cw_user'],$totalPrice)==FALSE)
-		  die("You do not have enough Vote Points!");
+		  die("Du hast nicht genug Vote Punkte!");
 
 	  $host = $GLOBALS['realms'][$values[1]]['host'];
 	  $rank_user = $GLOBALS['realms'][$values[1]]['rank_user'];

@@ -28,13 +28,13 @@ if (isset($_GET['newsid']))
 	 {
 	?>
     <hr/>
-    <h4 class="yellow_text">Comments</h4>
+    <h4 class="yellow_text">Kommentare</h4>
     <?php if ($_SESSION['cw_user']) { ?>
     <form action="?p=news&newsid=<?php echo $id; ?>" method="post">
     <table width="100%"> 
     	<tr> 
     		<td>
-   			    <textarea id="newscomment_textarea" name="text">Comment this post...</textarea> 
+   			    <textarea id="newscomment_textarea" name="text">Diesen Artikel kommentieren...</textarea> 
             </td>
    		    <td>
             	<input type="submit" value="Post" name="comment"> 
@@ -47,7 +47,7 @@ if (isset($_GET['newsid']))
     <?php
 	} 
 	else
-		echo '<span class="note">Log in to comment!</span>';
+		echo '<span class="note">Einloggen für Kommentare zu schreiben!</span>';
 	}
 	if (isset($_POST['comment'])) 
 	{
@@ -69,7 +69,7 @@ if (isset($_GET['newsid']))
 	
     $result = mysql_query("SELECT * FROM news_comments WHERE newsid='".$row['id']."' ORDER BY id ASC");
 	if (mysql_num_rows($result)==0)
-		echo "<span class='alert'>No comments has been made yet!</span>";
+		echo "<span class='alert'>Keine Kommentare, es wurden noch erstellt!</span>";
 	else 
 	{
 		$c = 0;
@@ -98,7 +98,7 @@ if (isset($_GET['newsid']))
 				
 				if(isset($_SESSION['cw_gmlevel']) && $_SESSION['cw_gmlevel']>=$GLOBALS['adminPanel_minlvl'] || 
 				isset($_SESSION['cw_gmlevel']) && $_SESSION['cw_gmlevel']>=$GLOBALS['staffPanel_minlvl'] && $GLOBALS['editNewsComments']==true)
-				 	echo '<br/><br/> ( <a href="#">Edit</a> | <a href="#remove" onclick="removeNewsComment('.$row['id'].')">Remove</a> )';  
+				 	echo '<br/><br/> ( <a href="#">Edit</a> | <a href="#remove" onclick="removeNewsComment('.$row['id'].')">Entfernen</a> )';  
 			   ?>
                <div class='news_count'>
                		<?php echo '#'.$c; ?>
@@ -166,7 +166,7 @@ else
 			 
 			echo '
 			<br/><br/><br/>
-			<i class="gray_text"> Written by '.$row['author'].' | '.$row['date'].' '.$comments.'</i>
+			<i class="gray_text"> ver&ouml;ffentlicht von '.$row['author'].' | '.$row['date'].' '.$comments.'</i>
 			</td> 
 			</tr>
 			</table>';

@@ -4,21 +4,21 @@
  /* Declare some general variables */ 
  $shopPage = mysql_real_escape_string($_GET['p']);
  $shopVar = "vote";
- $shopCurrency = "Vote Points";
+ $shopCurrency = "Vote Punkte";
  
  $selected = 'selected="selected"';
  ///////////////////////////////
  ?>
 <div class='box_two_title'>Vote Shop
 
-<div id='cartHolder' onclick='window.location="?p=cart"'>Loading Cart...</div> 
+<div id='cartHolder' onclick='window.location="?p=cart"'>Lade Warenkorb...</div> 
         <div id='cartArrow'>
         <img src='styles/default/images/arrow.png' border='none'/></div>
 </div>
 
 <?php
 if($GLOBALS[$shopVar.'Shop']['enableShop']==FALSE)
-	echo "<span class='attention'><b>Attention! </b>The shop is currently closed. Please check back later.</span>";
+	echo "<span class='attention'><b>Achtung! </b>Der Shop ist derzeit geschlossen. Bitte versuchen Sie es sp&auml;ter.</span>";
 else 
 {
 ?>

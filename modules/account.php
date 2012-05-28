@@ -12,7 +12,7 @@
             </span>
 			<hr/>
             <input type='button' value='Account Panel' onclick='window.location="?p=account"' class="leftbtn">
-			<input type='button' value='Passwort wechseln'  onclick='window.location="?p=changepass"' class="leftbtn">
+			<input type='button' value='Kennwort wechseln'  onclick='window.location="?p=changepass"' class="leftbtn">
             <input type='button' value='Vote Shop' onclick='window.location="?p=voteshop"' class="leftbtn">  
 			<input type='button' value='Spenden Shop'  onclick='window.location="?p=donateshop"' class="leftbtn">
             <input type='button' value='Werbt einen Freund'  onclick='window.location="?p=raf"' class="leftbtn">

@@ -1,4 +1,4 @@
-<h2>Page not found</h2>
-Sorry, but the requested page was not found!<br/><hr/>
-<a href="?p=home">&raquo; Back to the homepage</a><br/>
-<a href= "javascript:history.go(-1)">&raquo; Back to the previous page</A>
+<h2>oops,Seite nicht gefunden</h2>
+Die Angeforderte Seite wurde nicht gefunden!<br/><hr/>
+<a href="?p=home">&raquo; Zurück zu homepage</a><br/>
+<a href= "javascript:history.go(-1)">&raquo; Zurück zur letzten Seite</A>

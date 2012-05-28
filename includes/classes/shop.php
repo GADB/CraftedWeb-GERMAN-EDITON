@@ -189,10 +189,10 @@ class shop {
                                   </font>
 							 
 						   <div style="display:none;" id="status-<?php echo $entry; ?>" class="green_text">
-						   The item was added to your cart
+						   Der Artikel wurde zu Ihrem Warenkorb hinzugef&uuml;gt
 						   </div>
                            </td>
-                           <td><input type="button" value="Add to cart" onclick="addCartItem(<?php echo $entry; ?>,'<?php echo $shop; ?>Cart',
+                           <td><input type="button" value="in den Warenkorb" onclick="addCartItem(<?php echo $entry; ?>,'<?php echo $shop; ?>Cart',
                                '<?php echo $shop; ?>',this)"> 
                                
                            </td> 
@@ -287,16 +287,16 @@ class shop {
 							   if ($shop=="donate") 
                                		echo $GLOBALS['donation']['coins_name'];
 							   else 
-                               		echo 'Vote Points';   
+                               		echo 'Vote Punkte';   
 							   ?>
                                </font>
                          
                        <div style="display:none;" id="status-<?php echo $entry; ?>" class="green_text">
-                       		The item was added to your cart
+                       		Der Artikel wurde zu Ihrem Warenkorb hinzugef&uuml;gt
                        </div>
                        </td>
                        <td>
-                       		<input type="button" value="Add to cart" 
+                       		<input type="button" value="in den Warenkorb" 
                        	    onclick="addCartItem(<?php echo $entry; ?>,'<?php echo $shop; ?>Cart',
                        		'<?php echo $shop; ?>',this)"> 
                        </td> 

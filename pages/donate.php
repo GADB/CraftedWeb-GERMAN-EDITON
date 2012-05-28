@@ -1,6 +1,6 @@
 <?php account::isNotLoggedIn(); ?>
-<div class='box_two_title'>Donate</div>
-Enter your desired donation value, and then click the donation button.<br/><hr/>
+<div class='box_two_title'>Spenden</div>
+Geben Sie die gew&uuml;nschte Spende Wert ein, und klicken Sie dann auf Spende.<br/><hr/>
 <table align="center">
        <tr>
            <td align="center"><img src="styles/global/images/paypal.png"></td>
@@ -11,7 +11,7 @@ Enter your desired donation value, and then click the donation button.<br/><hr/>
 			   if($GLOBALS['donation']['donationType']==1)
 			   {
 			   ?>
-               	<input type="text" onKeyUp="changeAmount(this,'open')" value="Enter amount of coins you wish to buy..." onclick="this.value=''">
+               	<input type="text" onKeyUp="changeAmount(this,'open')" value="Geben sie die anzahl der Punkte ein die sie kaufen m&ouml;chten" onclick="this.value=''">
                <?php } 
 			   elseif($GLOBALS['donation']['donationType']==2)
 			   {
@@ -46,7 +46,7 @@ Enter your desired donation value, and then click the donation button.<br/><hr/>
           <input type="hidden" name="no_shipping" value="1" />
           <input type="hidden" name="no_note" value="1" />
           <input type="hidden" name="currency_code" value="<?php echo $GLOBALS['donation']['currency']; ?>" />
-          <input type="hidden" name="lc" value="US" />
+          <input type="hidden" name="lc" value="EUR" />
           <input type="hidden" name="bn" value="PP-ShopCartBF" />
           <input type="hidden" name="custom" value="<?php echo account::getAccountID($_SESSION['cw_user']); ?>">
          </form>
@@ -59,7 +59,7 @@ Enter your desired donation value, and then click the donation button.<br/><hr/>
 	 	?>
      <tr>
          <td align="center">
-         	<br/>Please read our <a href="#refundpolicy" onclick="viewRefundPolicy()">Refund Policy</a> before donating.
+         	<br/>Bitte lesen Sie unsere <a href="#refundpolicy" onclick="viewRefundPolicy()">Rückerstattungsregelung</a> befor sie spenden.
          <td>
      </tr>
      <?php } ?>

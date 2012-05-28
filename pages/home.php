@@ -3,7 +3,7 @@
 	 
 	 if ($GLOBALS['enableSlideShow']==false && $GLOBALS['news']['enable']==false)  
 	 {
-		 buildError("<b>Configuration file error.</b>Neither the slideshow or the news are displayed, the homepage will be empty.");
-		 echo "Seems like the homepage was empty!";
+		 buildError("<b>Fehler in der Konfigurationsdatei.</b>Weder die Diashow oder die Nachricht werden angezeigt, die Homepage wird leer sein");
+		 echo "Die Homepage wird leer sein";
 	 }
 ?>
